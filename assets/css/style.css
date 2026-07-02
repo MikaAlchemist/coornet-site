@@ -155,58 +155,60 @@ h1, h2, h3 { font-family: var(--font-head); font-weight: 600; letter-spacing: -0
   overflow: hidden;
 }
 .hero-bg { position: absolute; inset: 0; pointer-events: none; }
-/* galaxy vortex — huge, soft, sits behind the whole hero content (Xtract look) */
+/* comet-arm orb — intro: alone center stage, then rises behind headline */
 .orb {
   position: absolute;
   left: 50%;
-  top: 50%;
-  width: 940px;
-  height: 940px;
-  transform: translate(-50%, -52%);
+  top: 5%;
+  width: 500px;
+  height: 500px;
+  transform: translateX(-50%);
   opacity: 0;
-  animation: orbIntro 2s ease-out forwards;
+  animation: orbIntro 2.4s cubic-bezier(0.45, 0.05, 0.2, 1) forwards;
   will-change: transform, opacity;
 }
+/* two comet arms, offset 180deg, swirling as one vortex (Xtract look) */
 .orb::before {
   content: "";
   position: absolute;
   inset: 0;
   border-radius: 50%;
-  background: conic-gradient(from 300deg,
+  background: conic-gradient(from 315deg,
     transparent 0deg,
-    rgba(198, 152, 228, 0.4) 42deg,
-    rgba(152, 102, 202, 0.3) 95deg,
-    rgba(112, 70, 168, 0.18) 150deg,
-    rgba(82, 50, 132, 0.07) 210deg,
-    transparent 252deg,
+    rgba(223, 122, 254, 0.78) 28deg,
+    rgba(195, 112, 242, 0.52) 65deg,
+    rgba(140, 80, 210, 0.26) 115deg,
+    rgba(110, 60, 185, 0.09) 160deg,
+    transparent 195deg,
     transparent 360deg);
-  -webkit-mask: radial-gradient(circle, transparent 15%, #000 34%, #000 58%, transparent 79%);
-  mask: radial-gradient(circle, transparent 15%, #000 34%, #000 58%, transparent 79%);
-  filter: blur(46px);
-  animation: spin 20s linear infinite;
+  -webkit-mask: radial-gradient(circle, transparent 33%, #000 45%, #000 58%, transparent 73%);
+  mask: radial-gradient(circle, transparent 33%, #000 45%, #000 58%, transparent 73%);
+  filter: blur(22px);
+  animation: spin 12s linear infinite;
 }
 .orb::after {
   content: "";
   position: absolute;
-  inset: 13%;
+  inset: 4%;
   border-radius: 50%;
-  background: conic-gradient(from 120deg,
+  background: conic-gradient(from 135deg,
     transparent 0deg,
-    rgba(172, 122, 212, 0.34) 48deg,
-    rgba(124, 78, 178, 0.2) 110deg,
-    rgba(88, 52, 138, 0.08) 170deg,
-    transparent 218deg,
+    rgba(150, 88, 218, 0.5) 30deg,
+    rgba(115, 62, 185, 0.3) 75deg,
+    rgba(85, 42, 155, 0.12) 130deg,
+    transparent 175deg,
     transparent 360deg);
-  -webkit-mask: radial-gradient(circle, transparent 13%, #000 32%, #000 56%, transparent 77%);
-  mask: radial-gradient(circle, transparent 13%, #000 32%, #000 56%, transparent 77%);
-  filter: blur(42px);
-  animation: spin 26s linear infinite;
+  -webkit-mask: radial-gradient(circle, transparent 31%, #000 44%, #000 57%, transparent 74%);
+  mask: radial-gradient(circle, transparent 31%, #000 44%, #000 57%, transparent 74%);
+  filter: blur(24px);
+  animation: spin 13.5s linear infinite;
 }
 .orb-core { display: none; }
 @keyframes orbIntro {
-  0%   { opacity: 0; transform: translate(-50%, -52%) scale(1.12); }
-  30%  { opacity: 1; }
-  100% { opacity: 1; transform: translate(-50%, -52%) scale(1); }
+  0%   { opacity: 0; transform: translate(-50%, 26vh) scale(1.18); }
+  14%  { opacity: 1; transform: translate(-50%, 26vh) scale(1.18); }
+  58%  { opacity: 1; transform: translate(-50%, 26vh) scale(1.18); }
+  100% { opacity: 0.8; transform: translate(-50%, 0) scale(1); }
 }
 #stars { position: absolute; inset: 0; opacity: 0; animation: softIn 1.8s ease 0.6s forwards; }
 #stars i {
@@ -633,7 +635,7 @@ h1, h2, h3 { font-family: var(--font-head); font-weight: 600; letter-spacing: -0
   .hero { padding: 120px 20px 90px; min-height: 78vh; }
   .hero h1 { font-size: 40px; line-height: 1.12; }
   .hero-sub { font-size: 14px; }
-  .orb { width: 560px; height: 560px; }
+  .orb { width: 400px; height: 400px; }
   .section { padding: 70px 20px 0; }
   .sec-head { margin-bottom: 52px; }
   .sec-head h2 { font-size: 29px; }
@@ -656,7 +658,7 @@ h1, h2, h3 { font-family: var(--font-head); font-weight: 600; letter-spacing: -0
 /* ---------- reduced motion ---------- */
 @media (prefers-reduced-motion: reduce) {
   .tasks-scroll, .code-scroll, .leads-track, .r-scan, .int-line i, .st-spin svg, .me-fill, .orb::before, #stars i { animation: none !important; }
-  .orb { animation: none; opacity: 1; transform: translate(-50%, -52%); }
+  .orb { animation: none; opacity: 1; transform: translateX(-50%); }
   .hero h1, .hero-sub, .hero-cta, .hero-badge, #stars { animation: none; opacity: 1; transform: none; filter: none; }
   .hero-badge span:last-child { animation: none; clip-path: none; }
   .reveal { opacity: 1; transform: none; transition: none; }
