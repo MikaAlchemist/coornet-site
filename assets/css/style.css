@@ -167,44 +167,42 @@ h1, h2, h3 { font-family: var(--font-head); font-weight: 600; letter-spacing: -0
   animation: orbIntro 2.4s cubic-bezier(0.45, 0.05, 0.2, 1) forwards;
   will-change: transform, opacity;
 }
+/* two comet arms, offset 180deg, swirling as one vortex (Xtract look) */
 .orb::before {
   content: "";
   position: absolute;
   inset: 0;
   border-radius: 50%;
-  background: conic-gradient(from 300deg,
-    rgba(223, 122, 254, 0.55),
-    rgba(190, 110, 240, 0.4) 45deg,
-    rgba(129, 74, 200, 0.12) 95deg,
-    rgba(140, 85, 210, 0.42) 150deg,
-    rgba(129, 74, 200, 0.3) 195deg,
-    rgba(60, 30, 110, 0.03) 250deg,
-    rgba(90, 50, 160, 0.08) 290deg,
-    rgba(223, 122, 254, 0.55) 360deg);
-  -webkit-mask: radial-gradient(circle, transparent 28%, #000 44%, #000 55%, transparent 80%);
-  mask: radial-gradient(circle, transparent 28%, #000 44%, #000 55%, transparent 80%);
-  filter: blur(24px);
-  animation: spin 14s linear infinite;
+  background: conic-gradient(from 315deg,
+    transparent 0deg,
+    rgba(223, 122, 254, 0.78) 28deg,
+    rgba(195, 112, 242, 0.52) 65deg,
+    rgba(140, 80, 210, 0.26) 115deg,
+    rgba(110, 60, 185, 0.09) 160deg,
+    transparent 195deg,
+    transparent 360deg);
+  -webkit-mask: radial-gradient(circle, transparent 33%, #000 45%, #000 58%, transparent 73%);
+  mask: radial-gradient(circle, transparent 33%, #000 45%, #000 58%, transparent 73%);
+  filter: blur(22px);
+  animation: spin 12s linear infinite;
 }
-/* second arc layer, counter-rotating */
 .orb::after {
   content: "";
   position: absolute;
   inset: 4%;
   border-radius: 50%;
-  background: conic-gradient(from 120deg,
-    rgba(165, 100, 230, 0.4),
-    rgba(90, 45, 160, 0.04) 70deg,
-    rgba(200, 120, 250, 0.32) 160deg,
-    rgba(60, 30, 110, 0.02) 230deg,
-    rgba(120, 70, 200, 0.2) 300deg,
-    rgba(165, 100, 230, 0.4) 360deg);
-  -webkit-mask: radial-gradient(circle, transparent 30%, #000 46%, #000 56%, transparent 76%);
-  mask: radial-gradient(circle, transparent 30%, #000 46%, #000 56%, transparent 76%);
-  filter: blur(26px);
-  animation: spinRev 21s linear infinite;
+  background: conic-gradient(from 135deg,
+    transparent 0deg,
+    rgba(150, 88, 218, 0.5) 30deg,
+    rgba(115, 62, 185, 0.3) 75deg,
+    rgba(85, 42, 155, 0.12) 130deg,
+    transparent 175deg,
+    transparent 360deg);
+  -webkit-mask: radial-gradient(circle, transparent 31%, #000 44%, #000 57%, transparent 74%);
+  mask: radial-gradient(circle, transparent 31%, #000 44%, #000 57%, transparent 74%);
+  filter: blur(24px);
+  animation: spin 13.5s linear infinite;
 }
-@keyframes spinRev { to { transform: rotate(-360deg); } }
 .orb-core { display: none; }
 @keyframes orbIntro {
   0%   { opacity: 0; transform: translate(-50%, 26vh) scale(1.18); }
