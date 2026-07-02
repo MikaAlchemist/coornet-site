@@ -571,6 +571,12 @@ h1, h2, h3 { font-family: var(--font-head); font-weight: 600; letter-spacing: -0
 .st-spin svg { animation: spin 4s linear infinite; }
 .st-ok { color: #cfa9ff; border-color: rgba(129, 74, 200, 0.5); background: rgba(129, 74, 200, 0.14); }
 
+/* ---------- founder ---------- */
+.founder { padding-top: 40px; }
+.founder-card { text-align: center; max-width: 680px; margin: 0 auto; }
+.founder-card h2 { font-size: 30px; margin: 18px 0 12px; }
+.founder-card p { color: var(--dim); font-size: 15px; }
+
 /* ---------- CTA ---------- */
 .cta-card {
   margin: 110px 0 0;
