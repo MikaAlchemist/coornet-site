@@ -146,12 +146,12 @@ h1, h2, h3 { font-family: var(--font-head); font-weight: 600; letter-spacing: -0
 /* ---------- hero ---------- */
 .hero {
   position: relative;
-  min-height: 72vh;
+  min-height: 88vh;
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
-  padding: 140px 24px 60px;
+  padding: 140px 24px 120px;
   overflow: hidden;
 }
 .hero-bg { position: absolute; inset: 0; pointer-events: none; }
@@ -397,7 +397,7 @@ h1, h2, h3 { font-family: var(--font-head); font-weight: 600; letter-spacing: -0
 .md-meeting .t-ico { width: 25px; height: 25px; }
 
 /* ---------- process ---------- */
-.process { padding-top: 60px; }
+.process { padding-top: 110px; }
 .process-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 22px; }
 .p-card {
   background: var(--card);
@@ -605,7 +605,7 @@ h1, h2, h3 { font-family: var(--font-head); font-weight: 600; letter-spacing: -0
 }
 
 @media (max-width: 640px) {
-  .hero { padding: 120px 20px 50px; min-height: 62vh; }
+  .hero { padding: 120px 20px 90px; min-height: 78vh; }
   .hero h1 { font-size: 40px; line-height: 1.12; }
   .hero-sub { font-size: 14px; }
   .orb { width: 400px; height: 400px; }
