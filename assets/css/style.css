@@ -616,9 +616,9 @@ h1, h2, h3 { font-family: var(--font-head); font-weight: 600; letter-spacing: -0
   .feature-content h3 { font-size: 22px; }
   .mock-radar { gap: 14px; padding: 14px; }
   .radar-checks span { padding: 6px 8px; font-size: 10.5px; }
-  .p-mock { height: auto; min-height: 220px; }
-  .mock-integration { padding: 24px 16px; height: 220px; }
-  .mock-status { height: auto; padding: 16px; }
+  .p-mock { height: 230px; }
+  .mock-integration { padding: 24px 16px; height: 230px; }
+  .mock-status { padding: 16px; height: 230px; }
   .radar { width: 120px; height: 120px; }
   .r2 { inset: 19px; }
   .r3 { inset: 40px; }
